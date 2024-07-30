@@ -1,0 +1,38 @@
+.forecast-container {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 98%;
+}
+.day {
+    text-align: center;
+    padding: 10px;
+}
+.day img {
+    width: 40px;
+    height: 40px;
+}
+.temperature {
+    font-size: 24px;
+    color: #ff6347;
+}
+.range {
+    font-size: 16px;
+    color: #555;
+}
+.forecast-container .day {
+    color: rgba(51, 51, 51, 0.7);
+  }
+  
+  .forecast-container .current-day {
+    color: #F2994A;
+  }

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+.Dashboard{
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    background-color: #f7f9fa;
+    height: 100vh;
+}
+.weather-icon{
+    width: 150px;
+    display: block;
+    padding: 5px 0;
+}
+.loc-mark{
+    width: 30px;
+    display: inline-block;
+}
+.cir-chart{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filter{
+    border-radius: 10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg,rgba(76,88,88,1) 0%, rgba(60,68,77,0.6755077030812324) 50%, rgba(0,0,0,0.5942752100840336) 100%);
+}
+.btn-gradient{
+    background: linear-gradient(
+    to right,
+    rgba(255, 192, 0, 1) 50%,
+    rgba(247, 191, 71, 0.66) 100%);
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+}

@@ -1,0 +1,24 @@
+.task-completed{
+    font-family: 'ABeeZee',sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.13px;
+    font-size: 13;
+    line-height: 15.37px;
+    font-style: italic;
+    color: #334D6E;
+}
+.task-row{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.task-col{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.task-title{
+    font-family: 'ABeeZee',sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 0.17px;
+    line-height: 20.09px;
+    color: #334D6E;
+}

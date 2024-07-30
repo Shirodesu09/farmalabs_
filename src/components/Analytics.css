@@ -1,0 +1,13 @@
+.circular-progressbar .CircularProgressbar-path {
+    stroke: url(#gradient);
+  }
+.circular-progressbar2 .CircularProgressbar-path {
+    stroke: url(#gradient2);
+}
+  
+.circular-progressbar .CircularProgressbar-text {
+    fill: #fff;
+}
+.circular-progressbar2 .CircularProgressbar-text {
+    fill: #fff;
+}

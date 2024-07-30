@@ -1,0 +1,23 @@
+.task-card{
+    border-radius: 20px 20px 0 0;
+}
+.task-card-bottom{
+    background-color: #EBEFF2;
+}
+.task-card-bottom span{
+    color: #4380FF;
+    font-family: 'ABeeZee',sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.18px;
+    letter-spacing: 0.12px;
+    font-style: italic;
+}
+.task-card-bottom .icon{
+    width: 13px ;
+    height: 13px;
+    padding: 8px 14.5px;
+    background-color: #4380ff;
+    border-radius: 30px;
+    color: #fff;
+}

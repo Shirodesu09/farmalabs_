@@ -1,0 +1,30 @@
+.gradient-weather{
+    background-image: linear-gradient(
+    140deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(42deg 100% 90%) 7%,
+    hsl(42deg 100% 79%) 12%,
+    hsl(42deg 100% 68%) 21%,
+    hsl(45deg 100% 50%) 76%);
+}
+.sunrise-bg{
+    background: linear-gradient(180deg, #FC9C54 0%, rgba(252, 156, 84, 0.16) 100%);
+
+}
+.sunset-bg{
+    background: linear-gradient(180deg, #F27A54 0%, #A154F2 100%);
+}
+.custom-progress{
+    width: 76px;
+    border-radius: 20px;
+    background-color: #ea550f;
+    position: absolute;
+    right: 8px;
+}
+.empty-progress{
+    width: 76px;
+    border-radius: 20px;
+    background-color: #ffe5e5;
+    position: absolute;
+    right: 8px;
+}
