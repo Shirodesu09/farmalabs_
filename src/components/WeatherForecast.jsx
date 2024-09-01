@@ -56,7 +56,7 @@ function WeatherForecast() {
         <div className='row px-4 pt-2'>
             <div className="col-8">
                 <div className="row bg-white rounded-4 border border-2 mb-2">
-                    <div className="col-8">
+                    <div className="col-8 ps-4">
                         <div className='p-2' style={{fontFamily:'ABeeZee',fontSize:'16px'}}>
                             <img src="/mark.png" className='loc-mark' alt="" />
                             <span className='location'> <b>{weatherData.name}</b>, {weatherData.sys.country}</span>

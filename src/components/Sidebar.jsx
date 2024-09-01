@@ -60,7 +60,7 @@ const Sidebar = () => {
               <div>
                 <div className="nav__list">
                   <img src="/logo.png" className='' style={{ height: '40px' }} alt="" />
-                  <div className="sidebar-user py-4">
+                  <div className="sidebar-user py-2">
                     <div className="user-container px-1">
                       <img src="/user.png" style={{ width: '44px', borderRadius: '50px' }} alt="" />
                       <div className="user-info">

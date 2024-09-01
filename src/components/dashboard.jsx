@@ -103,8 +103,8 @@ function Dashboard() {
                             <p className='mb-0' style={{fontSize:'15px',fontWeight:400,fontStyle:'italic',letterSpacing:1,color:'#192A3E'}}>This Week</p>
                             <WeeklyWeather />
                         </div>
-                        <div class="row">
-                            <div class="col-3 offset-8 text-end h5 pt-2">Tasks</div>
+                        <div className="row">
+                            <div className="col-3 offset-8 text-end h5 pt-2">Tasks</div>
                         </div>
                         <div className="row pt-0 ps-3">
                             <div className="col-6">

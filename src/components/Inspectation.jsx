@@ -4,11 +4,16 @@ import DataTable from 'react-data-table-component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
+import EditInspectation from './EditInspectation';
+import AddInspectation from './AddInspectation';
 
 
 function Inspectation() {
+  const [Trigger, setTrigger] = useState(false)
+  const [triggerAddIns, settriggerAddIns] = useState(false)
   const navigate = useNavigate();
   const [Inspectaion, setInspectaion] = useState(null)
+  const [InspectaionsRow, setInspectaionsRow] = useState({})
   function handleDelete(row){
     Swal.fire({
       title: "Do you want to delete the Inspectation?",
@@ -20,25 +25,19 @@ function Inspectation() {
       if (result.isConfirmed) {
         try{
           fetch(`http://127.0.0.1:8477/api/del_inspc/${row.id}`, { method: 'DELETE' });
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+          });
           navigate(0);
         }
         catch(error){
           Swal.fire('somthing went wrong','','error')
         }
       }
-    });
-  }
-  async function handleEdit(row){
-    const data = row
-    const inputValue = data.date;
-    Swal.fire({
-      title: "Edit inspectation",
-      input: "date",
-      inputLabel: "Date",
-      inputValue,
-      showCancelButton: true,
-      confirmButtonText:'Update',
-
     });
   }
 
@@ -48,7 +47,7 @@ function Inspectation() {
           sortable: false,
           cell: row => (
             <div className='ms-1'>
-              <FontAwesomeIcon className='px-3' size='lg'  icon={faPen} style={{ cursor: 'pointer' }} onClick={() => handleEdit(row)} />
+              <FontAwesomeIcon className='px-3' size='lg'  icon={faPen} style={{ cursor: 'pointer' }} onClick={() => {setTrigger(true);setInspectaionsRow(row)}} />
               <FontAwesomeIcon icon={faCircleXmark} size='lg' style={{ cursor: 'pointer' }} onClick={() => handleDelete(row)} />
             </div>
           ),
@@ -137,10 +136,9 @@ function Inspectation() {
   useEffect(() => {
     const fetchInspectation= async ()=>{
       try{
-        const rep = await fetch('http://127.0.0.1:8477/api/contact/inspectation')
+        const rep = await fetch('http://127.0.0.1:8477/api/inspectation')
         const data = await rep.json();
         setInspectaion(data)
-        console.log(data);
       }catch(error){
         console.log("inspectation not found");
       }
@@ -164,9 +162,9 @@ function Inspectation() {
                 <img src="/filter.png" className='m-2' style={{width:'14px'}} alt="" />
                 <span className='pe-2'>FILTER</span>
             </div>
-            <div className='add-user-contact text-white d-flex align-items-center' style={{background:'#2ed47a'}}>
+            <div className='add-inspectation text-white d-flex align-items-center' onClick={() => {settriggerAddIns(true)} } style={{background:'#2ed47a',cursor:'pointer'}}>
                 <img src="/add.png" className='m-2' style={{width:'14px'}} alt="" />
-                <span className='pe-2' style={{textTransform:'uppercase'}}>inspectation</span>
+                <span className='pe-2' style={{textTransform:'uppercase'}} >inspectation</span>
             </div>
         </div>
         <div style={{fontFamily:'Roboto',fontWeight:400,fontSize:'14px'}} className='scrollable-table-container mx-3'>
@@ -179,7 +177,8 @@ function Inspectation() {
                 paginationPerPage={10}
             />
         </div>
-    
+      <EditInspectation trigger={Trigger} data={InspectaionsRow} setTrigger={setTrigger} />
+      <AddInspectation triggerAddIns={triggerAddIns} settriggerAddIns={settriggerAddIns} />
     </>
   )
 }

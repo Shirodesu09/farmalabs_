@@ -35,18 +35,18 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 function TemperatureChart() {
-  const [tempDuration, setTempDuration] = useState("Monthly");
+  const [Duration, setDuration] = useState("Monthly");
 
-  const handleTempDuration = (data) => {
-    setTempDuration(data);
+  const handleDuration = (data) => {
+    setDuration(data);
   };
-  console.log(tempDuration)
+  console.log(Duration)
 
   return (
     <div className="chart-container">
       <div className='user-temp'>
         <h5 style={{color:'#192A3E',fontWeight:500 ,lineHeight:0.8,fontSize:20,paddingLeft:5}}>Temperature Per User</h5>
-        <Dropdown handleTempDuration={handleTempDuration} options={['Monthly', 'Yearly']} />
+        <Dropdown handleDuration={handleDuration} options={['Monthly', 'Yearly']} />
       </div>
       <hr />
       <ResponsiveContainer style={{padding:'10px 0'}} width="100%" height="90%">

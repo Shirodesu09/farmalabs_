@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Dropdown({ options, handleTempDuration }) {
+function Dropdown({ options, handleDuration }) {
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +17,7 @@ function Dropdown({ options, handleTempDuration }) {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
-    handleTempDuration(option); // Send selected option to the parent component
+    handleDuration(option);
   };
 
   return (
